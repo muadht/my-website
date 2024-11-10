@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full-Screen Background Video with Sidebar Clock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Background Video from Google Drive -->
+    <div class="video-container">
+        <iframe
+            src="https://www.youtube.com/embed/Wy4bkltgPkw?autoplay=1&mute=1&loop=1&playlist=Wy4bkltgPkw"
+            frameborder="0"
+            allow="autoplay; encrypted-media"
+            allowfullscreen>
+        </iframe>
+    </div>    
+    <div class="sidebar">
+        <!-- Clock Display -->
+        <div id="live-clock">
+            <div class="date"></div>
+            <div class="time"></div>
+        </div>
+
+        <!-- New Widget -->
+        <iframe src="https://almosaly.com/widget/day?id=1&type=1" 
+                style="border: none; overflow: hidden; width: 100%; height: 600px; margin-top: 20px;">
+        </iframe>
+    </div>
+
+    <!-- Weather Widget (Bottom of Screen) -->
+    <div class="weather-widget">
+        <div id="ww_30d07cb17cb1e" v='1.3' loc='id' a='{"t":"ticker","lang":"ar","sl_lpl":1,"ids":["wl2983"],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"image","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722"}'>
+            <a href="https://weatherwidget.org/" id="ww_30d07cb17cb1e_u" target="_blank">weatherwidget.org</a>
+        </div>
+        <script async src="https://app3.weatherwidget.org/js/?id=ww_30d07cb17cb1e"></script>
+    </div>
+
+    <script src="scripts/clock.js"></script> <!-- Custom clock JavaScript -->
+
+</body>
+</html>
